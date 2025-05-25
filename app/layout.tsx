@@ -10,7 +10,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "LastMinuteDost",
+  title: "LastMinuteDost | AI-Tutor",
   description: "Real-time and AI-powered Teaching Buddy available 24/7!",
   icons: {
     icon: [
