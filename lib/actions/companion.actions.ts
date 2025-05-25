@@ -176,7 +176,17 @@ export const getBookmarkedCompanions = async (userId: string) => {
   const supabase = createSupabaseClient();
   const { data, error } = await supabase
     .from("bookmarks")
-    .select(`companions:companion_id (*)`) // Notice the (*) to get all the companion data
+    .select(`
+      companion_id,
+      companions (
+        id,
+        name,
+        subject,
+        topic,
+        duration,
+        author
+      )
+    `)
     .eq("user_id", userId);
   if (error) {
     throw new Error(error.message);
