@@ -47,11 +47,20 @@ export const getCompanion = async (id: string) => {
     const { data, error } = await supabase
         .from('companions')
         .select()
-        .eq('id', id);
+        .eq('id', id)
+        .single();
 
-    if(error) return console.log(error);
+    if(error) {
+        console.error('Error fetching companion:', error);
+        return null;
+    }
 
-    return data[0];
+    if(!data) {
+        console.error('No companion found with id:', id);
+        return null;
+    }
+
+    return data;
 }
 
 export const addToSessionHistory = async (companionId: string) => {

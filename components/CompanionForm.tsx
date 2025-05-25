@@ -119,7 +119,7 @@ const CompanionForm = () => {
                             <FormLabel>What should the companion help with?</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Ex. Derivates & Integrals"
+                                    placeholder="Ex. Derivatives & Integrals"
                                     {...field}
                                     className="input"
                                 />
