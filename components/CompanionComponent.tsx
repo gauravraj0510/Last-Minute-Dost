@@ -163,7 +163,7 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                                     </p>
                                 )
                             } else {
-                               return <p key={index} className="text-primary max-sm:text-sm">
+                               return <p key={index} className="text-[16px] text-primary max-sm:text-sm">
                                     {userName}: {message.content}
                                 </p>
                             }
